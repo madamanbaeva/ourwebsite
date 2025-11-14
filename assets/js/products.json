@@ -1,0 +1,5 @@
+[
+  {"id":1, "name":"Футболка Basic", "price":4500, "image":"assets/images/tshirt.jpg"},
+  {"id":2, "name":"Джинсы Slim", "price":9800, "image":"assets/images/jeans.jpg"},
+  {"id":3, "name":"Куртка демисезонная", "price":18500, "image":"assets/images/jacket.jpg"}
+]
