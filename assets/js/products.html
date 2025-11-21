@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothing Store — Киім дүкені</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Clothing Store</h1>
+      <div class="controls">
+        <input id="search-input" type="text" placeholder="Өнімдерді іздеу...">
+        <select id="category-filter"></select>
+        <button id="openCart" class="cart-btn">
+          🛒 <span id="cartCount" class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Жаңа коллекция — стиль мен сапа</h2>
+      <p>Жылдам жеткізу • Ыңғайлы төлем • Қайтару бар</p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Каталог</h2>
+      <div id="products-container" class="products"></div>
+    </section>
+  </main>
+
+  <!-- Корзина модалкасы -->
+  <div id="cartModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeCart" class="modal-close">✕</button>
+      <h3>Себет</h3>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="total">Барлығы: <span id="cartTotal">0</span> ₸</div>
+        <div>
+          <button id="clearCart" class="btn btn-ghost">Тазарту</button>
+          <button id="checkout" class="btn btn-primary">Тапсырыс беру</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Товар модалкасы -->
+  <div id="productModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeProductModal" class="modal-close">✕</button>
+      <div class="product-detail">
+        <img id="modal-img" src="" alt="">
+        <h2 id="modal-title"></h2>
+        <p id="modal-desc"></p>
+        <div class="size-selection"><span>Өлшем:</span></div>
+        <div class="quantity-selection">
+          <span>Саны:</span>
+          <input type="number" id="modal-quantity" value="1" min="1" max="99">
+        </div>
+        <div class="delivery-selection">
+          <span>Жеткізу:</span>
+          <select id="modal-delivery">
+            <option value="pickup">Өзім келіп аламын</option>
+            <option value="courier">Курьер</option>
+          </select>
+        </div>
+        <div class="modal-footer">
+          <span id="modal-price"></span>
+          <button id="addToCartModal" class="btn">Себетке қосу</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Clothing Store — Командалық жоба</p>
+    </div>
+  </footer>
+
+  <script src="products.js" defer></script>
+  <script src="main.js" defer></script>
+
+</body>
+</html>
